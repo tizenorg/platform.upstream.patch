@@ -32,6 +32,7 @@ make %{?_smp_mflags}
 %make_install
 
 %files
+%manifest %{name}.manifest
 %license COPYING
 %manifest patch.manifest
 %{_bindir}/*

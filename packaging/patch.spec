@@ -22,6 +22,9 @@ applications.
 %setup -q
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 cp %{SOURCE1001} .
 CFLAGS="%{optflags} -D_GNU_SOURCE"
 

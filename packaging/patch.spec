@@ -27,6 +27,8 @@ export CFLAGS+=" -fvisibility=hidden"
   
 cp %{SOURCE1001} .
 CFLAGS="%{optflags} -D_GNU_SOURCE"
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
 
 %configure 
 make %{?_smp_mflags}
